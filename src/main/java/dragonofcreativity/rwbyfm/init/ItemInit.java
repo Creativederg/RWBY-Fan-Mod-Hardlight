@@ -53,9 +53,9 @@ public class ItemInit
 			RWBYGunAddon.SCYTHE, 
 			"{AttributeModifiers:[{AttributeName:\"generic.attackDamage\",Name:\"generic.attackDamage\",Amount:18,Operation:0,UUIDLeast:571090,UUIDMost:892303,Slot:\"mainhand\"}]}", 
 			"rwbyfm:riqochet_holograph_rocket", 
-			"rwbym:nuller,rwbym:nulls", 
+			"rwbym:ammov", 
 			false,
-            1,
+            5,
             false,
             false,
             0,
@@ -70,9 +70,9 @@ public class ItemInit
 			0, 
 			null, 
 			"rwbyfm:riqochet_holograph_sniper", 
-			"rwbym:nuller,rwbym:nulls", 
+			"rwbym:ammov", 
 			false, 
-			1, 
+			5, 
 			false, 
 			false, 
 			0, 
@@ -87,9 +87,9 @@ public class ItemInit
 			0, 
 			null, 
 			"rwbyfm:riqochet_holograph_piercing_laser", 
-			"rwbym:nuller,rwbym:nulls", 
+			"rwbym:ammov", 
 			false, 
-			1, 
+			2, 
 			false, 
 			false, 
 			0, 
@@ -104,9 +104,9 @@ public class ItemInit
 			0,
 			null,
 			"rwbyfm:riqochet_holograph_scythe", 
-			"rwbym:nullers,rwbym:nulls",
+			"rwbym:ammov",
 			false,
-			1,
+			20,
 			false,
 			false,
 			0,
@@ -116,21 +116,21 @@ public class ItemInit
 			null).setRecoil(0);
 	
 	public static void registerAll(FMLPreInitializationEvent event){
-		/*registerItems(event, ItemInit.BOOTS_HARDLIGHT);
+		registerItems(event, ItemInit.BOOTS_HARDLIGHT);
 		registerItems(event, ItemInit.CHESTPLATE_HARDLIGHT);
 		registerItems(event, ItemInit.HELMET_HARDLIGHT);
 		registerItems(event, ItemInit.ICON);
 		registerItems(event, ItemInit.INGOT_HARDLIGHT);
-		registerItems(event, ItemInit.LEGGINGS_HARDLIGHT);*/
+		registerItems(event, ItemInit.LEGGINGS_HARDLIGHT);
 		registerItems(event, ItemInit.RIQOCHET_HOLOGRAPH_PIERCING_LASER);
 		registerItems(event, ItemInit.RIQOCHET_HOLOGRAPH_ROCKET);
 		registerItems(event, ItemInit.RIQOCHET_HOLOGRAPH_SCYTHE);
-		/*registerItems(event, ItemInit.RIQOCHET_HOLOGRAPH_SCYTHE_BlADE_BACK);
+		registerItems(event, ItemInit.RIQOCHET_HOLOGRAPH_SCYTHE_BlADE_BACK);
 		registerItems(event, ItemInit.RIQOCHET_HOLOGRAPH_SCYTHE_BLADE_CENTRE);
 		registerItems(event, ItemInit.RIQOCHET_HOLOGRAPH_SCYTHE_BlADE_FRONT);
 		registerItems(event, ItemInit.RIQOCHET_HOLOGRAPH_SCYTHE_END);
 		registerItems(event, ItemInit.RIQOCHET_HOLOGRAPH_SCYTHE_HEAD);
-		registerItems(event, ItemInit.RIQOCHET_HOLOGRAPH_SCYTHE_STAFF);*/
+		registerItems(event, ItemInit.RIQOCHET_HOLOGRAPH_SCYTHE_STAFF);
 		registerItems(event, ItemInit.RIQOCHET_HOLOGRAPH_SNIPER);
 	}
 
