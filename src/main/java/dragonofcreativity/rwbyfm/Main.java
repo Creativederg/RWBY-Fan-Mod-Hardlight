@@ -1,6 +1,9 @@
 package dragonofcreativity.rwbyfm;
 
 import dragonofcreativity.rwbyfm.creativetabs.RWBYFMTab;
+import dragonofcreativity.rwbyfm.gui.GUIHardlight_Forge;
+import dragonofcreativity.rwbyfm.objects.blocks.containers.Hardlight_Forge_Container;
+import dragonofcreativity.rwbyfm.objects.blocks.tileentities.TileEntityHardlightForge;
 import dragonofcreativity.rwbyfm.proxy.CommonProxy;
 import dragonofcreativity.rwbyfm.util.Reference;
 import io.github.blaezdev.rwbym.RWBYSoundHandler;
@@ -50,7 +53,7 @@ public class Main
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
-				
+		GameRegistry.registerTileEntity(TileEntityHardlightForge.class, new ResourceLocation(this.MODID, "furnace"));		
 	}
 	@EventHandler
 	public void init(FMLInitializationEvent event) 
@@ -59,10 +62,41 @@ public class Main
         if (event.getSide() == Side.CLIENT) {
             OBJLoader.INSTANCE.addDomain("rwbyfm");
         }
+        NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
         RegUtil.registerAllRecipes(event);
         proxy.registerRenderers(this);
         RWBYSoundHandler.init();
 	}
+
+    public static class GuiHandler implements IGuiHandler {
+    	
+    	public enum GUI {
+    		GUI_Hardlight_Forge
+    	}
+    	
+        @Override
+        public Object getServerGuiElement(int id, EntityPlayer player, World world, int x, int y, int z) {
+
+        	switch (GUI.values()[id]) {
+                case GUI_Hardlight_Forge:
+                    return new Hardlight_Forge_Container(player.inventory, (TileEntityHardlightForge) world.getTileEntity(new BlockPos(x,y,z)));
+    			}
+
+        	throw new IllegalArgumentException("No GUI with ID: " + id);
+
+        }
+
+        @Override
+        public Object getClientGuiElement(int id, EntityPlayer player, World world, int x, int y, int z) {
+
+        	switch (GUI.values()[id]) {
+                case GUI_Hardlight_Forge:
+                    return new GUIHardlight_Forge(player.inventory, (TileEntityHardlightForge) world.getTileEntity(new BlockPos(x,y,z)));
+	    	}
+	    	
+	    	throw new IllegalArgumentException("No GUI with ID: " + id);
+    	}
+    }
 
 
     @SubscribeEvent

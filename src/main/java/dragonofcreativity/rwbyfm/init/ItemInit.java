@@ -5,13 +5,12 @@ import java.util.List;
 
 import dragonofcreativity.rwbyfm.Main;
 import dragonofcreativity.rwbyfm.objects.armour.ArmourBase;
+import dragonofcreativity.rwbyfm.objects.blocks.RWBYFMHardlight_forge;
 import dragonofcreativity.rwbyfm.objects.items.ItemBase;
 import dragonofcreativity.rwbyfm.objects.items.RWBYGunAddon;
 import dragonofcreativity.rwbyfm.util.Reference;
 import io.github.blaezdev.rwbym.Init.RWBYCreativeTabs;
-import io.github.blaezdev.rwbym.blocks.RWBYBlock;
 import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.EntityEquipmentSlot;
@@ -136,14 +135,6 @@ public class ItemInit
 			enchantmentglow, 
 			soundeffect, 
 			creativetab);*/
-	/*public static final Block rwbyfblock1 = new RWBYBlock(
-            "block_hardlight",
-            Material.IRON,
-            Main.rwbyfmtab,
-            5F,
-            0F,
-            "pickaxe",
-            1);*/
 	
 	public static void registerAll(FMLPreInitializationEvent event){
 		/*registerItems(event, ItemInit.BOOTS_HARDLIGHT);
