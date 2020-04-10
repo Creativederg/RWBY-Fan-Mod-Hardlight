@@ -9,6 +9,9 @@ import dragonofcreativity.rwbyfm.objects.items.ItemBase;
 import dragonofcreativity.rwbyfm.objects.items.RWBYGunAddon;
 import dragonofcreativity.rwbyfm.util.Reference;
 import io.github.blaezdev.rwbym.Init.RWBYCreativeTabs;
+import io.github.blaezdev.rwbym.blocks.RWBYBlock;
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.EntityEquipmentSlot;
@@ -27,7 +30,7 @@ public class ItemInit
 	
 	//Material
 	public static final ToolMaterial TOOL_HARDLIGHT = EnumHelper.addToolMaterial("tool_hardlight", 3, 2500, 13.0F, 13.0F, 5);
-	public static final ArmorMaterial ARMOR_HARDLIGHT = EnumHelper.addArmorMaterial("armour_hardlight", Reference.MODID + ":hardlight", 33, new int[]{10, 10, 10, 10}, 5, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 10.0F);
+	//public static final ArmorMaterial ARMOR_HARDLIGHT = EnumHelper.addArmorMaterial("armour_hardlight", Reference.MODID + ":hardlight", 33, new int[]{10, 10, 10, 10}, 5, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 10.0F);
 	
 	//Items
 	public static final Item RIQOCHET_HOLOGRAPH_SCYTHE_HEAD = new ItemBase("riqochet_holograph_scythe_head", Main.rwbyfmtab);
@@ -38,22 +41,24 @@ public class ItemInit
 	public static final Item RIQOCHET_HOLOGRAPH_SCYTHE_END = new ItemBase("riqochet_holograph_scythe_end", Main.rwbyfmtab);
 	public static final Item INGOT_HARDLIGHT = new ItemBase("ingot_hardlight", Main.rwbyfmtab);
 	public static final Item ICON = new ItemBase("icon", null);
+	public static final Item HARDLIGHT_CORE = new ItemBase("hardlight_core", Main.rwbyfmtab);
+	public static final Item HARDLIGHT_CIRCUITRY = new ItemBase("hardlight_circuitry", Main.rwbyfmtab);
 	
 	//Armour
-	public static final Item HELMET_HARDLIGHT = new ArmourBase("helmet_hardlight", ARMOR_HARDLIGHT, 1, EntityEquipmentSlot.HEAD, Main.rwbyfmtab);
-	public static final Item CHESTPLATE_HARDLIGHT = new ArmourBase("chestplate_hardlight", ARMOR_HARDLIGHT, 1, EntityEquipmentSlot.CHEST, Main.rwbyfmtab);
-	public static final Item LEGGINGS_HARDLIGHT = new ArmourBase("leggings_hardlight", ARMOR_HARDLIGHT, 2, EntityEquipmentSlot.LEGS, Main.rwbyfmtab);
-	public static final Item BOOTS_HARDLIGHT = new ArmourBase("boots_hardlight", ARMOR_HARDLIGHT, 1,EntityEquipmentSlot.FEET, Main.rwbyfmtab);
-	
+	//public static final Item HELMET_HARDLIGHT = new ArmourBase("helmet_hardlight", ARMOR_HARDLIGHT, 1, EntityEquipmentSlot.HEAD, Main.rwbyfmtab);
+	//public static final Item CHESTPLATE_HARDLIGHT = new ArmourBase("chestplate_hardlight", ARMOR_HARDLIGHT, 1, EntityEquipmentSlot.CHEST, Main.rwbyfmtab);
+	//public static final Item LEGGINGS_HARDLIGHT = new ArmourBase("leggings_hardlight", ARMOR_HARDLIGHT, 2, EntityEquipmentSlot.LEGS, Main.rwbyfmtab);
+	//public static final Item BOOTS_HARDLIGHT = new ArmourBase("boots_hardlight", ARMOR_HARDLIGHT, 1,EntityEquipmentSlot.FEET, Main.rwbyfmtab);
+		
 	//Weapons
 	public static final Item RIQOCHET_HOLOGRAPH_SCYTHE = new RWBYGunAddon(
 			"riqochet_holograph_scythe", 
 			2500, 
-			17, 
+			35, 
 			RWBYGunAddon.SCYTHE, 
 			"{AttributeModifiers:[{AttributeName:\"generic.attackDamage\",Name:\"generic.attackDamage\",Amount:18,Operation:0,UUIDLeast:571090,UUIDMost:892303,Slot:\"mainhand\"}]}", 
 			"rwbyfm:riqochet_holograph_sniper", 
-			"rwbym:ammov", 
+			"rwbym:hardlightmagazines", 
 			false,
             5,
             false,
@@ -70,7 +75,7 @@ public class ItemInit
 			0, 
 			null, 
 			"rwbyfm:riqochet_holograph_piercing_laser", 
-			"rwbym:ammov", 
+			"rwbym:hardlightmagazines", 
 			false, 
 			2, 
 			false, 
@@ -87,7 +92,7 @@ public class ItemInit
 			0, 
 			null, 
 			"rwbyfm:riqochet_holograph_rocket", 
-			"rwbym:ammov", 
+			"rwbym:hardlightmagazines", 
 			false, 
 			5, 
 			false, 
@@ -100,11 +105,11 @@ public class ItemInit
 	public static final Item RIQOCHET_HOLOGRAPH_PIERCING_LASER = new RWBYGunAddon(
 			"riqochet_holograph_piercing_laser", 
 			2500, 
-			0,
+			35,
 			0,
 			null,
 			"rwbyfm:riqochet_holograph_scythe", 
-			"rwbym:ammov",
+			"rwbym:hardlightmagazines",
 			false,
 			20,
 			false,
@@ -114,9 +119,34 @@ public class ItemInit
 			1,
 			1,
 			null).setRecoil(0);
+	/*public static final Item ENERGY_SWORD = new RWBYGunAddon(
+			name, 
+			durability, 
+			weapondamage, 
+			weapontype, 
+			data, 
+			morph, 
+			ammo, 
+			noCharge, 
+			projectileSpeed, 
+			shield, 
+			canBlock, 
+			recoilType, 
+			bulletCount, 
+			enchantmentglow, 
+			soundeffect, 
+			creativetab);*/
+	/*public static final Block rwbyfblock1 = new RWBYBlock(
+            "block_hardlight",
+            Material.IRON,
+            Main.rwbyfmtab,
+            5F,
+            0F,
+            "pickaxe",
+            1);*/
 	
 	public static void registerAll(FMLPreInitializationEvent event){
-		registerItems(event, ItemInit.BOOTS_HARDLIGHT);
+		/*registerItems(event, ItemInit.BOOTS_HARDLIGHT);
 		registerItems(event, ItemInit.CHESTPLATE_HARDLIGHT);
 		registerItems(event, ItemInit.HELMET_HARDLIGHT);
 		registerItems(event, ItemInit.ICON);
@@ -131,7 +161,7 @@ public class ItemInit
 		registerItems(event, ItemInit.RIQOCHET_HOLOGRAPH_SCYTHE_END);
 		registerItems(event, ItemInit.RIQOCHET_HOLOGRAPH_SCYTHE_HEAD);
 		registerItems(event, ItemInit.RIQOCHET_HOLOGRAPH_SCYTHE_STAFF);
-		registerItems(event, ItemInit.RIQOCHET_HOLOGRAPH_SNIPER);
+		registerItems(event, ItemInit.RIQOCHET_HOLOGRAPH_SNIPER);*/
 	}
 
 	private static void registerItems(FMLPreInitializationEvent event, Item...items) {

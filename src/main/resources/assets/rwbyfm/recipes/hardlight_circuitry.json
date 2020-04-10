@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "   ",
+        "dbd",
+        "aca"
+    ],
+    "key": {
+            "a": {"item": "minecraft:iron_ingot"},
+            "b": {"item": "minecraft:redstone"},
+            "c": {"item": "rwbyfm:ingot_hardlight"},
+            "d": {"item": "rwbym:dustcrystalhardlight"}
+            },
+          "result": {
+              "item": "rwbyfm:hardlight_circuitry",
+              "count": 1
+          }
+}

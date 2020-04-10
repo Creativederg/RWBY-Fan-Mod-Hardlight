@@ -3,17 +3,16 @@
     
     "pattern":
     [
-        " cb",
-        "  a",
-        "   "
+        " a ",
+        "aba",
+        " a "
     ],
     "key": {
             "a": {"item": "rwbym:dustcrystalhardlight"},
-            "b": {"item": "rwbyfm:ingot_hardlight"},
-            "c": {"item": "rwbyfm:hardlight_circuitry"}
+            "b": {"item": "rwbyfm:hardlight_core"}
             },
           "result": {
-              "item": "rwbyfm:riqochet_holograph_scythe_blade_back",
+              "item": "rwbym:hardlightmagazines",
               "count": 1
           }
 }

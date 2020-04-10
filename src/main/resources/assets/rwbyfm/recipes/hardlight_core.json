@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "dad",
+        "bcb",
+        "dad"
+    ],
+    "key": {
+            "a": {"item": "minecraft:iron_ingot"},
+            "b": {"item": "minecraft:glass_pane"},
+            "c": {"item": "rwbym:dustcrystalhardlight"},
+            "d": {"item": "rwbym:dustrockhardlight"}
+            },
+          "result": {
+              "item": "rwbyfm:hardlight_core",
+              "count": 1
+          }
+}

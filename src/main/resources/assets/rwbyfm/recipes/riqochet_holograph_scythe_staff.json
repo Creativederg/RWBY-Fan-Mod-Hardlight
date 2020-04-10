@@ -3,13 +3,14 @@
     
     "pattern":
     [
-        "aaa",
-        "aba",
-        "aaa"
+        " ab",
+        "aca",
+        "ba "
     ],
     "key": {
             "a": {"item": "rwbym:dustcrystalhardlight"},
-            "b": {"item": "rwbym:cr5"}
+            "b": {"item": "rwbyfm:ingot_hardlight"},
+            "c": {"item": "rwbyfm:hardlight_circuitry"}
             },
           "result": {
               "item": "rwbyfm:riqochet_holograph_scythe_staff",

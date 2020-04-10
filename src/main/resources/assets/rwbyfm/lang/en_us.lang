@@ -11,13 +11,16 @@ item.chestplate_hardlight.name=Hardlight Chestplate
 item.leggings_hardlight.name=Hardlight Leggings
 item.boots_hardlight.name=Hardlight Boots
 item.ingot_hardlight.name=Hardlight Ingot
-item.riqochet_holograph_scythe.name=Riqochet Holograph
-item.riqochet_holograph_sniper.name=Riqochet Holograph
-item.riqochet_holograph_rocket.name=Riqochet Holograph
-item.riqochet_holograph_piercing_laser.name=Riqochet Holograph
+item.rwbyfm:riqochet_holograph_scythe.name=Riqochet Holograph
+item.rwbyfm:riqochet_holograph_sniper.name=Riqochet Holograph
+item.rwbyfm:riqochet_holograph_rocket.name=Riqochet Holograph
+item.rwbyfm:riqochet_holograph_piercing_laser.name=Riqochet Holograph
+item.rwbym:hardlightmagazines.name=Hardlight Magazine
+item.hardlight_circuitry.name=Hardlight Circuitry
+item.hardlight_core.name=Hardlight Core 
 
 //blocks
-tile.hardlight_forge.name=Hardlight Forge
+tile.block_hardlight.name=Hardlight Block
 
 //Group
 itemGroup.rwbyfmtab=RWBY Fan Mod

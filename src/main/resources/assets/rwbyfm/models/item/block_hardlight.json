@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "rwbyfm:blocks/block_hardlight",
+    "up": "rwbyfm:blocks/block_hardlight",
+    "north": "rwbyfm:blocks/block_hardlight",
+    "east": "rwbyfm:blocks/block_hardlight",
+    "south": "rwbyfm:blocks/block_hardlight",
+    "west": "rwbyfm:blocks/block_hardlight",
+    "particle": "rwbyfm:blocks/block_hardlight"
+  }
+}

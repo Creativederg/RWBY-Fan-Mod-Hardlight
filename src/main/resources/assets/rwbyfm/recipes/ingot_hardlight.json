@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "aaa",
+        "aba",
+        "aaa"
+    ],
+    "key": {
+            "a": {"item": "rwbym:dustcrystalhardlight"},
+            "b": {"item": "minecraft:iron_ingot"}
+            },
+          "result": {
+              "item": "rwbyfm:ingot_hardlight",
+              "count": 4
+          }
+}
